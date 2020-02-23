@@ -19,4 +19,10 @@ func main() {
 	d, err := os.Open(dirname)
 	if err != nil {
 		fmt.Println(err)
+		os.Exit(1)
+	}
+	for _, fi := range filesinfo {
+		if fi.Mode().IsRegular() {
+			
+		}
 	}
