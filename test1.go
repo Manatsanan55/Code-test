@@ -23,6 +23,6 @@ func main() {
 	}
 	for _, fi := range filesinfo {
 		if fi.Mode().IsRegular() {
-			
+			fmt.Printf("-----\nFileName: %s \nSize: \t%d bytes\n")
 		}
 	}
