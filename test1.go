@@ -21,6 +21,11 @@ func main() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+	filesinfo, err := d.Readdir(-1)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 	for _, fi := range filesinfo {
 		if fi.Mode().IsRegular() {
 			fmt.Printf("-----\nFileName: %s \nSize: \t%d bytes\n",
