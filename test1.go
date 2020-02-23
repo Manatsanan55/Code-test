@@ -13,4 +13,10 @@ func walkFn(path string, info os.FileInfo, err error) error {
 
 func main() {
 	filepath.Walk("C:/New folder", walkFn)
-}
+	slash := string(filepath.Separator)
+	dirname := "." +slash
+	fmt.Printf("dirname is: %s\n", dirname)
+	d, err := os.Open(dirname)
+	if err != nil {
+		fmt.Println(err)
+	}
