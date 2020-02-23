@@ -1,5 +1,7 @@
 package main
 
-func walkFn(path string) {
+import "os"
+
+func walkFn(path string, info os.FileInfo, err error) error {
 
 }
